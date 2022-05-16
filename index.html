@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>成人糖尿病每日热能供给量</title>
+  <style type="text/css">
+	
+	
+	body{
+	    font-family: 黑体;
+	    background-color:blanchedalmond;
+	}
+	 #title{
+	     height: 2px;
+	     width: 900px;
+		 display: none;
+/* 	     background-image: url(../前端/img图片库/1.jpg);
+	     background-size: 900px 200px;
+	     background-repeat: no-repeat; */
+	     margin: 0 auto;
+	     margin-top: 0;
+	     padding: 0;
+	 }
+	 h2{
+	     font-family: 黑体;
+	     color: rgb(7, 51, 134);
+	     position: relative;
+	     left: 600px;
+	 }
+	 #box{
+	     padding: 20px;
+	     height: 600px;
+	     width: 600px;
+	     border-top: double 3px rgb(17, 157, 223);
+	     margin-top: 200px;
+	     margin: 0 auto;
+	 }
+	 span{
+	     font-weight: bold;
+	     font-family: 黑体;
+	     
+	 }
+	 #a{
+	     margin:20px;
+	     position: relative;
+	     left: 100px;
+	     font-size: 20px;
+	 }
+	 #b{
+	     margin:10px;
+	     position: relative;
+	     left: 115px;
+	     font-size: 18px ;
+	 }
+	 #c{
+	     margin: 20px;
+	     position: relative;
+	     left: 180px;
+	     font-size: 15px;
+	     color: blue;
+	 }
+	 #d{
+	     position: relative;
+	     left: 200px;
+	     font-size: 15px;
+	     color:chocolate;
+	 }
+	 #box1{
+	     width: 550px ;
+	     height: 600px;
+	     border-top: 3px dotted rgb(66, 91, 138) ;
+	     margin:20px;
+	     position: relative;
+	     left: 5px;
+	     padding: 10px;
+	 }
+	 #aa{
+	     position: relative;
+	     font-size: 15px;
+	     color: rebeccapurple;
+	     position: relative;
+	     left: 150px;
+	 }
+	 .ss{
+	     position: relative;
+	     left: 30px;
+	 }
+	 .input{
+	     position: relative;
+	     left: 30px;
+	     margin: 10px;
+	     border-radius: 0.5em;
+	     border:2px solid rgb(36, 88, 156);
+	 }
+	 .btn{
+	     position: relative;
+	     left: 30px;
+	     border-radius: 0.5em;
+	 }
+	 .btn:hover{
+	     cursor:pointer;
+	 }
+	 .sss{
+	     position: relative;
+	     left: 20px;
+	 }
+	 .sssr{
+	     position: relative;
+	     left: 20px;
+		 color: red;
+	 }
+	 #bb{
+	     margin-top: 20px;
+	     position: relative;
+	     left: 200px;
+	 }
+	 #end{
+	     background-color: rgb(141, 226, 241);
+	     position: relative;
+	     left: 170px;
+	 }
+	 #tab{
+	     height: 300px;
+	     width: 500px;
+	     border: 2px solid rebeccapurple;
+	     margin: 25px;
+	     background-color:lightyellow;
+	     text-align: center;
+	     border-collapse: collapse;
+	     
+	 }
+	 td{
+	     border: 1px solid rebeccapurple;
+	 }
+	</style>
+</head>
+<body>
+    <div id="title">
+            
+    </div>
+   <br>
+    <h2>成人糖尿病每日热能供给量</h2>
+    <div id="box">
+        <div id="a"><span> </span> </div>
+        <div id="b"> </div>
+        <div id="c"> </div>
+        <div id="d"></div>
+        <div id="box1">
+            <div id="aa">数值改变时自动计算或者点击按钮！</div>
+            <span id="s1" class="ss">身高：</span><input name="gao" class="input" id="input1" oninput="JS()"  type="text" >
+            <span id="ss1" class="sss">cm</span>
+ 
+            <!-- button按钮的响应函数功能，属性里加上  onclick="函数名" -->
+            <button id="btn1" class="btn" onclick="BMI()">开始计算体型</button><br>
+            <span id="s2" class="ss">体重：</span><input name="zhong" class="input" id="input2" oninput="BMI()" type="text">
+            <span id="ss2" class="sss" >kg</span>
+            <button id="btn2" class="btn" onclick="QING()">清除重算体型</button><br>
+ 
+ <span id="s2" class="ss">输入劳动强度：</span><input name="tiliqk" class="input" id="input3" oninput="JSmrrk()" type="text"><br>
+ <span id="s2" class="ss">每日所需要总热量：</span> <input  class="input" type="text" id="mrrk">
+ <span id="ss2" class="sss" >千卡</span>
+ <button id="btn3" class="btn" onclick="JSmrrk()">计算每日所需要总热量</button><br>
+ 
+ 
+           
+			 
+			 <span id="ss2" class="sss" style="left:30px" >每日所需摄入碳水化合物&nbsp;</span> <span id="tshhw" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
+			 			<span id="ss2" class="sss" >脂肪&nbsp;</span><span id="zf" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
+			 			<span id="ss2" class="sss" >蛋白质&nbsp;</span><span id="dbz" class="sssr" ></span><span id="ss2" class="sss" >克。</span><br><br>
+			
+			 <span id="s2" class="ss">该患者体型:</span><span id="end" class="sssr" ></span><br>
+			
+			
+			<table id="tab">
+				<tr>
+					<td colspan="5">成人糖尿病每日热能供给量（千卡/每公斤标准体重）</td>
+				</tr>
+			    <tr>
+			        <td>体型</td>
+			        <td colspan="4">劳动强度</td>              
+			    </tr>
+			    <tr>
+			        <td> </td>
+			        <td id="xia">卧床</td>
+					<td>轻体力</td>
+					<td id="xia">中体力</td>
+					<td id="xia">重体力</td>
+			    </tr>
+			    <tr id="fp">
+			        <td> 肥胖/超重</td>
+			        <td >15</td>
+					<td>20-25</td>
+					<td>30</td>
+					<td>35</td>
+			    </tr>
+			    <tr id="zc">
+			        <td> 正常</td>
+			        <td >15-20</td>
+					<td>25-30</td>
+					<td>35</td>
+					<td>40</td>
+			    </tr>
+				
+				<tr id="xs">
+				    <td> 消瘦</td>
+				    <td >20-25</td>
+					<td>35</td>
+					<td>40</td>
+					<td>45-50</td>
+				</tr>
+				
+			</table>
+			
+			
+				
+			
+        </div>
+    </div>
+    <!-- 链接js文件，一般放在body末尾处 -->
+   <script type="text/javascript">
+	function BMI(){
+	        // 这里的input1是文本框的id
+	        // 从文本框获取输入的值
+	        var gao =document.getElementById("input1").value;
+	        // 与上相同
+	        var zhong =document.getElementById("input2").value;
+			
+			var bztizhong =gao-105;
+			var piancha = bztizhong*0.1;
+		    console.log("piancha="+piancha);
+		   console.log("bztizhong="+bztizhong);
+		   
+		   document.getElementById("xs").style.backgroundColor="lightyellow";
+		   document.getElementById("fp").style.backgroundColor="lightyellow";
+		   document.getElementById("zc").style.backgroundColor="lightyellow";
+		   
+			if(zhong<(bztizhong-piancha)){
+				ans="消瘦";
+				
+				var qingg=document.getElementById("xs");
+				qingg.style.backgroundColor="yellow";
+				
+			}
+			else if(zhong>bztizhong+piancha){
+				ans="肥胖/超重";
+				var qingg=document.getElementById("fp");
+				qingg.style.backgroundColor="yellow";
+				
+				}else{
+					ans="正常";
+					var qingg=document.getElementById("zc");
+					qingg.style.backgroundColor="yellow";
+					
+				}
+			
+			
+			
+	
+	        
+	        document.getElementById("end").innerText=ans;
+	 
+	 
+	        
+	    }
+	    function QING(){
+	        document.getElementById("input1").value="";
+	        document.getElementById("input2").value="";
+	        document.getElementById("end").value="";
+	        var qingg=document.getElementById("xia");
+	            qingg.style.backgroundColor="lightyellow";
+	            var midd=document.getElementById("mid");
+	            midd.style.backgroundColor="lightyellow";
+	            var zhong=document.getElementById("shang");
+	            zhong.style.backgroundColor="lightyellow";
+	    }
+	 function JSmrrk(){
+		 var gao =document.getElementById("input1").value;
+		 // 与上相同
+		 
+		 var tlrk =document.getElementById("input3").value;
+		 
+		 
+		 var bztizhong =gao-105;
+		 var mrrk =bztizhong*tlrk;
+		  console.log("mrrk="+mrrk);
+		   document.getElementById("mrrk").value=mrrk;
+		   
+		   document.getElementById("tshhw").innerText=mrrk*0.6;
+		   document.getElementById("zf").innerText=mrrk*0.25;
+		   document.getElementById("dbz").innerText=bztizhong*1;
+	    }
+		function JS(){
+			BMI();
+			JSmrrk();
+				
+		   }
+		
+		
+	</script>
+</body>
+</html>
