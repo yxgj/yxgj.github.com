@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>成人糖尿病每日热能供给量计算</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成人糖尿病每日热能供给量计算</title>
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
   <style type="text/css">
 	
 	
@@ -12,29 +15,19 @@
 	    font-family: 黑体;
 	    background-color:blanchedalmond;
 	}
-	 #title{
-	     height: 2px;
-	     width: 900px;
-		 display: none;
-/* 	     background-image: url(../前端/img图片库/1.jpg);
-	     background-size: 900px 200px;
-	     background-repeat: no-repeat; */
-	     margin: 0 auto;
-	     margin-top: 0;
-	     padding: 0;
-	 }
+
 	 h2{
 	     font-family: 黑体;
 	     color: rgb(7, 51, 134);
 	     position: relative;
-	     text-align: center;
+	    text-align: center;
 	 }
 	 #box{
-	     padding: 20px;
-	     height: 600px;
-	     width: 600px;
+	     
+	     height: 100%;
+	     width: 90%;
 	     border-top: double 3px rgb(17, 157, 223);
-	     margin-top: 200px;
+	     align: center;
 	     margin: 0 auto;
 	 }
 	 span{
@@ -42,61 +35,34 @@
 	     font-family: 黑体;
 	     
 	 }
-	 #a{
-	     margin:20px;
-	     position: relative;
-	     left: 100px;
-	     font-size: 20px;
-	 }
-	 #b{
-	     margin:10px;
-	     position: relative;
-	     left: 115px;
-	     font-size: 18px ;
-	 }
-	 #c{
-	     margin: 20px;
-	     position: relative;
-	     left: 180px;
-	     font-size: 15px;
-	     color: blue;
-	 }
-	 #d{
-	     position: relative;
-	     left: 200px;
-	     font-size: 15px;
-	     color:chocolate;
-	 }
+	 
 	 #box1{
-	     width: 550px ;
-	     height: 600px;
-	     border-top: 3px dotted rgb(66, 91, 138) ;
-	     margin:20px;
+	     width: 100% ;
+	     height: 100%;
+	    
 	     position: relative;
-	     left: 5px;
-	     padding: 10px;
+	   
 	 }
 	 #aa{
 	     position: relative;
-	     font-size: 15px;
+	    
 	     color: rebeccapurple;
 	     position: relative;
-	     left: 150px;
+	     
 	 }
 	 .ss{
 	     position: relative;
-	     left: 30px;
+	   
 	 }
 	 .input{
 	     position: relative;
-	     left: 30px;
-	     margin: 10px;
+	  
 	     border-radius: 0.5em;
 	     border:2px solid rgb(36, 88, 156);
 	 }
 	 .btn{
 	     position: relative;
-	     left: 30px;
+	   
 	     border-radius: 0.5em;
 	 }
 	 .btn:hover{
@@ -104,28 +70,25 @@
 	 }
 	 .sss{
 	     position: relative;
-	     left: 20px;
+	   
 	 }
 	 .sssr{
 	     position: relative;
-	     left: 20px;
+	     
 		 color: red;
 	 }
 	 #bb{
-	     margin-top: 20px;
+	    
 	     position: relative;
-	     left: 200px;
+	    
 	 }
 	 #end{
 	     background-color: rgb(141, 226, 241);
 	     position: relative;
-	     left: 170px;
+	     
 	 }
 	 #tab{
-	     height: 300px;
-	     width: 500px;
-	     border: 2px solid rebeccapurple;
-	     margin: 25px;
+	
 	     background-color:lightyellow;
 	     text-align: center;
 	     border-collapse: collapse;
@@ -148,30 +111,33 @@
         <div id="c"> </div>
         <div id="d"></div>
         <div id="box1">
-            <div id="aa">数值改变时自动计算或者点击按钮！</div>
-            <span id="s1" class="ss">身高：</span><input name="gao" class="input" id="input1" oninput="JS()"  type="text" >
-            <span id="ss1" class="sss">cm</span>
+            <div id="aa">数值改变时自动计算</div>
+			<div class="ui-field-contain">
+			 <label for="fullname">身高（cm）：</label><input name="gao" id="input1" oninput="JS()"  type="text" >
  
             <!-- button按钮的响应函数功能，属性里加上  onclick="函数名" -->
-            <button id="btn1" class="btn" onclick="BMI()">开始计算体型</button><br>
-            <span id="s2" class="ss">体重：</span><input name="zhong" class="input" id="input2" oninput="BMI()" type="text">
-            <span id="ss2" class="sss" >kg</span>
-            <button id="btn2" class="btn" onclick="QING()">清除重算体型</button><br>
+           <!-- <button id="btn1" class="ui-btn" onclick="BMI()">开始计算体型</button><br> -->
+          
+			
+			
+			 <label for="tizhong">体重（kg）：</label><input name="zhong"  id="input2" oninput="BMI()" type="text">
+           <!-- <button id="btn2" class="btn" onclick="QING()">清除重算体型</button><br> -->
  
- <span id="s2" class="ss">输入劳动强度：</span><input name="tiliqk" class="input" id="input3" oninput="JSmrrk()" type="text"><br>
- <span id="s2" class="ss">每日所需要总热量：</span> <input  class="input" type="text" id="mrrk">
- <span id="ss2" class="sss" >千卡</span>
- <button id="btn3" class="btn" onclick="JSmrrk()">计算每日所需要总热量</button><br>
- 
+<label for="ldqd">输入劳动强度：</label> <input name="tiliqk"  id="input3" oninput="JSmrrk()" type="text"><br>
+
+ <!-- <button id="btn3" class="btn" onclick="JSmrrk()">计算每日所需要总热量</button><br>
+ -->
+ </div>	
  
            
-			 
-			 <span id="ss2" class="sss" style="left:30px" >每日所需摄入碳水化合物&nbsp;</span> <span id="tshhw" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
+			  
+			   <span id="s2" class="ss">每日所需要总热量（千卡）：</span><span id="mrrk" class="sssr" ></span><br>
+			 <span id="ss2" class="sss"  >每日所需摄入碳水化合物&nbsp;</span> <span id="tshhw" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
 			 			<span id="ss2" class="sss" >脂肪&nbsp;</span><span id="zf" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
 			 			<span id="ss2" class="sss" >蛋白质&nbsp;</span><span id="dbz" class="sssr" ></span><span id="ss2" class="sss" >克。</span><br><br>
 			
 			 <span id="s2" class="ss">该患者体型:</span><span id="end" class="sssr" ></span><br>
-			
+		 
 			
 			<table id="tab">
 				<tr>
@@ -285,7 +251,7 @@
 		 var bztizhong =gao-105;
 		 var mrrk =bztizhong*tlrk;
 		  console.log("mrrk="+mrrk);
-		   document.getElementById("mrrk").value=mrrk;
+		   document.getElementById("mrrk").innerText=mrrk;
 		   
 		   document.getElementById("tshhw").innerText=mrrk*0.6;
 		   document.getElementById("zf").innerText=mrrk*0.25;
