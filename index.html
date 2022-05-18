@@ -15,7 +15,17 @@
 	    font-family: 黑体;
 	    background-color:blanchedalmond;
 	}
-
+	 #title{
+	     
+	     width: 100%;
+		 display: none;
+/* 	     background-image: url(../前端/img图片库/1.jpg);
+	     background-size: 900px 200px;
+	     background-repeat: no-repeat; */
+	     margin: 0 auto;
+	     margin-top: 0;
+	     padding: 0;
+	 }
 	 h2{
 	     font-family: 黑体;
 	     color: rgb(7, 51, 134);
@@ -92,6 +102,9 @@
 	     background-color:lightyellow;
 	     text-align: center;
 	     border-collapse: collapse;
+	     align: center;
+	     margin: 0 auto;
+		 	     width: 90%;
 	     
 	 }
 	 td{
@@ -100,46 +113,8 @@
 	</style>
 </head>
 <body>
-    <div id="title">
-            
-    </div>
-   <br>
-    <h2>成人糖尿病每日热能供给量计算</h2>
-    <div id="box">
-        <div id="a"><span> </span> </div>
-        <div id="b"> </div>
-        <div id="c"> </div>
-        <div id="d"></div>
-        <div id="box1">
-            <div id="aa">数值改变时自动计算</div>
-			<div class="ui-field-contain">
-			 <label for="fullname">身高（cm）：</label><input name="gao" id="input1" oninput="JS()"  type="text" >
- 
-            <!-- button按钮的响应函数功能，属性里加上  onclick="函数名" -->
-           <!-- <button id="btn1" class="ui-btn" onclick="BMI()">开始计算体型</button><br> -->
-          
-			
-			
-			 <label for="tizhong">体重（kg）：</label><input name="zhong"  id="input2" oninput="BMI()" type="text">
-           <!-- <button id="btn2" class="btn" onclick="QING()">清除重算体型</button><br> -->
- 
-<label for="ldqd">输入劳动强度：</label> <input name="tiliqk"  id="input3" oninput="JSmrrk()" type="text"><br>
-
- <!-- <button id="btn3" class="btn" onclick="JSmrrk()">计算每日所需要总热量</button><br>
- -->
- </div>	
- 
-           
-			  
-			   <span id="s2" class="ss">每日所需要总热量（千卡）：</span><span id="mrrk" class="sssr" ></span><br>
-			 <span id="ss2" class="sss"  >每日所需摄入碳水化合物&nbsp;</span> <span id="tshhw" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
-			 			<span id="ss2" class="sss" >脂肪&nbsp;</span><span id="zf" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
-			 			<span id="ss2" class="sss" >蛋白质&nbsp;</span><span id="dbz" class="sssr" ></span><span id="ss2" class="sss" >克。</span><br><br>
-			
-			 <span id="s2" class="ss">该患者体型:</span><span id="end" class="sssr" ></span><br>
-		 
-			
-			<table id="tab">
+	<h2>成人糖尿病每日热能供给量计算</h2>
+<table id="tab">
 				<tr>
 					<td colspan="5">成人糖尿病每日热能供给量（千卡/每公斤标准体重）</td>
 				</tr>
@@ -178,6 +153,43 @@
 				</tr>
 				
 			</table>
+   <br>
+    
+    <div id="box">
+        <div id="a"><span> </span> </div>
+        <div id="b"> </div>
+        <div id="c"> </div>
+        <div id="d"></div>
+        <div id="box1">
+            <div id="aa">数值改变时自动计算</div>
+			<div class="ui-field-contain">
+			 <label for="fullname">身高（cm）：</label><input name="gao" id="input1" oninput="JS()"  type="text" >
+ 
+            <!-- button按钮的响应函数功能，属性里加上  onclick="函数名" -->
+           <!-- <button id="btn1" class="ui-btn" onclick="BMI()">开始计算体型</button><br> -->
+          
+			
+			
+			 <label for="tizhong">体重（kg）：</label><input name="zhong"  id="input2" oninput="BMI()" type="text">
+           <!-- <button id="btn2" class="btn" onclick="QING()">清除重算体型</button><br> -->
+ 
+<label for="ldqd">输入劳动强度：</label> <input name="tiliqk"  id="input3" oninput="JSmrrk()" type="text"><br>
+
+ <!-- <button id="btn3" class="btn" onclick="JSmrrk()">计算每日所需要总热量</button><br>
+ -->
+ </div>	
+ 
+           
+			  
+			   <span id="s2" class="ss">每日所需要总热量（千卡）：</span><span id="mrrk" class="sssr" ></span><br>
+			 <span id="ss2" class="sss"  >每日所需摄入碳水化合物&nbsp;</span> <span id="tshhw" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
+			 			<span id="ss2" class="sss" >脂肪&nbsp;</span><span id="zf" class="sssr" ></span><span id="ss2" class="sss" >克、</span>
+			 			<span id="ss2" class="sss" >蛋白质&nbsp;</span><span id="dbz" class="sssr" ></span><span id="ss2" class="sss" >克。</span><br><br>
+			
+			 <span id="s2" class="ss">该患者体型:</span><span id="end" class="sssr" ></span><br>
+		 
+			
+			
 			
 			
 				
